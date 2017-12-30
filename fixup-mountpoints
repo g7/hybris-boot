@@ -755,6 +755,24 @@ case "$DEVICE" in
             -e 's block/bootdevice/by-name/oem mmcblk0p30 ' \
             "$@"
         ;;
+
+    "latte")
+        sed -i \
+            -e 's block/by-name/android_bk1 mmcblk0p6 ' \
+            -e 's block/by-name/android_boot mmcblk0p9 ' \
+            -e 's block/by-name/android_bootloader mmcblk0p7 ' \
+            -e 's block/by-name/android_bootloader2 mmcblk0p8 ' \
+            -e 's block/by-name/android_cache mmcblk0p12 ' \
+            -e 's block/by-name/android_config mmcblk0p2 ' \
+            -e 's block/by-name/android_data mmcblk0p13 ' \
+            -e 's block/by-name/android_factory mmcblk0p3 ' \
+            -e 's block/by-name/android_metadata mmcblk0p5 ' \
+            -e 's block/by-name/android_misc mmcblk0p4 ' \
+            -e 's block/by-name/android_persistent mmcblk0p1 ' \
+            -e 's block/by-name/android_recovery mmcblk0p10 ' \
+            -e 's block/by-name/android_system mmcblk0p11 ' \
+            "$@"
+        ;;
     *)
         cat <<EOF
 
